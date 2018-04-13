@@ -1,0 +1,30 @@
+# lab 06
+This lab 06 submission is designed to support the
+insertion, deletion, and visualization of the Red-Black
+Tree.
+
+## Running The Program
+The program ustilizes JGraphT to display the Red Black Tree.
+To compile you must run the commands given by Professor Mohan:
+
+
+first,
+
+`javac -d ../../../bin/ -cp .://home/j/jonesm2/cs250s2018/Labs/lab06/JGraphT/jar/* *.java`
+
+then,
+
+`java -cp .:/home/j/jonesm2/cs250s2018/Labs/lab06/JGraphT/jar/* com.web.RBTreeVisualizer`
+
+To run the program, use  ` java Demo`  after compiling the files in the "Red Black Tree" folder.
+Utilizing a command-line interface, the user will be asked to supply a root node.
+Then, the program will continue to ask for additional nodes from the user. The insertions will continue
+so long the user does type the `n` command. Once the user is finished inserting, the `n` command ends the
+insertion process and creates a JFrame window that visualizes the final Red Black tree accounting,
+for all of the user's insertions.
+
+
+
+## Algorithms
+
+## Additional Sources

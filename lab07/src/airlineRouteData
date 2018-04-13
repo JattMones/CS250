@@ -1,33 +1,33 @@
 City, Distance, Price
-Pittsburgh 409 km
-Erie 482 km
+Pittsburgh 409 km $300
+Erie 482 km       $300
 Philadelphia
-New York JFK 151 km
-New York LaGuardia 154 km
-Atlanta 1073 km
-Washington D.C. 188 km
-Chicago 1065 km
-Dallas 2095 km
-Seattle 3821 km
-Orlando 1390 km
-Detroit 709 km
-Minneapolis 1576 km
-San Fran 4052 km
-Los Angeles 3860 km
-San Diego 3810 km
-Denver 2503 km
-Vegas 3501 km
-Miami 1636 km
-Phoenix 3341 km
+New York JFK 151 km $250
+New York LaGuardia 154 km $250
+Atlanta 1073 km $400
+Washington D.C. 188 km $250
+Chicago 1065 km $400
+Dallas 2095 km $400
+Seattle 3821 km $450
+Orlando 1390 km $400
+Detroit 709 km $300
+Minneapolis 1576 km $400
+San Fran 4052 km $450
+Los Angeles 3860 km $450
+San Diego 3810 km $450
+Denver 2503 km $400
+Vegas 3501 km $450
+Miami 1636 km $400
+Phoenix 3341 km $450
 
 
-Carslise 168 km
-Akron 88 km
-Dubois 341 km
-Latrobe 356 km
-Altoona Blair County 277 km
-North Central west Virginia Airport, 432 km
-John Murtha Johnstown Cambria County 310 km
-Morgantown Municipal Walter L. Bill Hart Field 63 km
-Arnold Palmer Regional Airport 358 km
-Allegheny County 402 km
+Carslise 168 km $250
+Akron 88 km $250
+Dubois 341 km $250
+Latrobe 356 km $250
+Altoona Blair County 277 km $250
+North Central west Virginia Airport, 432 km $300
+John Murtha Johnstown Cambria County 310 km $250
+Morgantown Municipal Walter L. Bill Hart Field 63 km $250
+Arnold Palmer Regional Airport 358 km $250
+Allegheny County 402 km $300

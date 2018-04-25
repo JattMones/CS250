@@ -17,9 +17,7 @@ public class cityArray{
     }
     FILE.close();
     String[] tempsArray = cityList.toArray(new String[0]);
-    for (String s : tempsArray) {
-      System.out.println(s);
-    }
+
     return tempsArray;
   }
 }

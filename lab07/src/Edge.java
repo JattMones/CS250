@@ -8,7 +8,7 @@
  ******************************************************************************/
 
 /**
- *  The {@code Edge} class represents a weighted edge in an 
+ *  The {@code Edge} class represents a weighted edge in an
  *  {@link EdgeWeightedGraph}. Each edge consists of two integers
  *  (naming the two vertices) and a real-value weight. The data type
  *  provides methods for accessing the two endpoints of the edge and
@@ -21,7 +21,11 @@
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  */
-public class Edge implements Comparable<Edge> { 
+ import java.util.*;
+ import java.io.File;
+ import java.io.FileInputStream;
+ import java.io.IOException;
+public class Edge implements Comparable<Edge> {
 
     private final int v;
     private final int w;
@@ -34,7 +38,7 @@ public class Edge implements Comparable<Edge> {
      * @param  v one vertex
      * @param  w the other vertex
      * @param  weight the weight of this edge
-     * @throws IllegalArgumentException if either {@code v} or {@code w} 
+     * @throws IllegalArgumentException if either {@code v} or {@code w}
      *         is a negative integer
      * @throws IllegalArgumentException if {@code weight} is {@code NaN}
      */
@@ -100,7 +104,15 @@ public class Edge implements Comparable<Edge> {
      * @return a string representation of this edge
      */
     public String toString() {
-        return String.format("%d-%d %.5f", v, w, weight);
+      cityArray city = new cityArray();
+      try{
+      String[] cities = city.toArray();
+        return String.format("%s %s %s %s %d", cities[v], "to", cities[w], "is", (long)weight);
+
+      }catch(IOException e){
+        System.out.println("No File");
+      }
+      return null;
     }
 
     /**

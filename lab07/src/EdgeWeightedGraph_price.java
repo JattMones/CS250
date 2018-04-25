@@ -1,6 +1,6 @@
 /******************************************************************************
- *  Compilation:  javac EdgeWeightedGraph.java
- *  Execution:    java EdgeWeightedGraph filename.txt
+ *  Compilation:  javac EdgeWeightedGraph_price.java
+ *  Execution:    java EdgeWeightedGraph_price filename.txt
  *  Dependencies: Bag.java Edge.java In.java StdOut.java
  *  Data files:   https://algs4.cs.princeton.edu/43mst/tinyEWG.txt
  *                https://algs4.cs.princeton.edu/43mst/mediumEWG.txt
@@ -9,7 +9,7 @@
  *  An edge-weighted undirected graph, implemented using adjacency lists.
  *  Parallel edges and self-loops are permitted.
  *
- *  % java EdgeWeightedGraph tinyEWG.txt
+ *  % java EdgeWeightedGraph_price tinyEWG.txt
  *  8 16
  *  0: 6-0 0.58000  0-2 0.26000  0-4 0.38000  0-7 0.16000
  *  1: 1-3 0.29000  1-2 0.36000  1-7 0.19000  1-5 0.32000
@@ -25,7 +25,7 @@
 
 
 /**
- *  The {@code EdgeWeightedGraph} class represents an edge-weighted
+ *  The {@code EdgeWeightedGraph_price} class represents an edge-weighted
  *  graph of vertices named 0 through <em>V</em> – 1, where each
  *  undirected edge is of type {@link Edge} and has a real-valued weight.
  *  It supports the following two primary operations: add an edge to the graph,
@@ -54,7 +54,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class EdgeWeightedGraph {
+public class EdgeWeightedGraph_price {
     private static final String NEWLINE = System.getProperty("line.separator");
 
     private final int V;
@@ -67,7 +67,7 @@ public class EdgeWeightedGraph {
      * @param  V the number of vertices
      * @throws IllegalArgumentException if {@code V < 0}
      */
-    public EdgeWeightedGraph(int V) {
+    public EdgeWeightedGraph_price(int V) {
         if (V < 0) throw new IllegalArgumentException("Number of vertices must be nonnegative");
         this.V = V;
         this.E = 0;
@@ -85,7 +85,7 @@ public class EdgeWeightedGraph {
      * @throws IllegalArgumentException if {@code V < 0}
      * @throws IllegalArgumentException if {@code E < 0}
      */
-    public EdgeWeightedGraph(int V, int E) {
+    public EdgeWeightedGraph_price(int V, int E) {
         this(V);
         if (E < 0) throw new IllegalArgumentException("Number of edges must be nonnegative");
         for (int i = 0; i < E; i++) {
@@ -108,7 +108,7 @@ public class EdgeWeightedGraph {
      * @throws IllegalArgumentException if the endpoints of any edge are not in prescribed range
      * @throws IllegalArgumentException if the number of vertices or edges is negative
      */
-    public EdgeWeightedGraph(In in) {
+    public EdgeWeightedGraph_price(In in) {
         this(in.readInt());
         int E = in.readInt();
         if (E < 0) throw new IllegalArgumentException("Number of edges must be nonnegative");
@@ -128,7 +128,7 @@ public class EdgeWeightedGraph {
      *
      * @param  G the edge-weighted graph to copy
      */
-    public EdgeWeightedGraph(EdgeWeightedGraph G) {
+    public EdgeWeightedGraph_price(EdgeWeightedGraph_price G) {
         this(G.V());
         this.E = G.E();
         for (int v = 0; v < G.V(); v++) {
@@ -241,7 +241,7 @@ public class EdgeWeightedGraph {
      *         followed by the <em>V</em> adjacency lists of edges
      */
     public String toString() {
-      
+
         StringBuilder s = new StringBuilder();
         s.append(V + " " + E + NEWLINE);
         for (int v = 0; v < V; v++) {
@@ -256,13 +256,13 @@ public class EdgeWeightedGraph {
 
 
     /**
-     * Unit tests the {@code EdgeWeightedGraph} data type.
+     * Unit tests the {@code EdgeWeightedGraph_price} data type.
      *
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
         In in = new In(args[0]);
-        EdgeWeightedGraph G = new EdgeWeightedGraph(in);
+        EdgeWeightedGraph_price G = new EdgeWeightedGraph_price(in);
         StdOut.println(G);
     }
 

@@ -19,9 +19,11 @@ System.out.println("Press 1 to show all flight information. \nPress 2 to show a 
     System.out.println("Enter: \n(1) for flight distances \n(2) for flight prices");
     int choice = scan.nextInt();
     if(choice == 1){
+      System.out.println("(Distances in km.)");
       Get.distance();
     }
     if(choice == 2){
+    System.out.println("(Price in USD.)");
     Get.price();
   }else{
       continue;
@@ -31,11 +33,13 @@ System.out.println("Press 1 to show all flight information. \nPress 2 to show a 
     System.out.println("Enter: \n(1) for flight distances MST \n(2) for flight prices MST");
     int choice = scan.nextInt();
     if(choice == 1){
+      System.out.println("(Distances in km.)");
       Get.PrimDistance();
       System.out.println("");
 
     }
     if(choice == 2){
+    System.out.println("(Price in USD.)");
     Get.PrimPrice();
     System.out.println("");
   }else{
@@ -135,12 +139,11 @@ else if(input == 4){//method will ask for a "price cap" from the user, display a
     System.out.println("Would you like too add or remove a flight?");
     String edit = scan.next();
     if(edit.equals("add")){
-      //method or code to add data to our file
+      System.out.println("Add feature coming soon...");
     }
     else{
-      //method of code to remove data from our file
+      System.out.println("Remove feature coming soon...");
     }
-    System.out.println("5");//method will add or remove flights/nodes. This method will feature writing and deleting from the data file.
   }
   System.out.println("Would you like to exit?(y/n)");
   if(scan.next().equals("y"))

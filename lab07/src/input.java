@@ -11,10 +11,35 @@ while(run){
 System.out.println("Press 1 to show all flight information. \nPress 2 to show a mst of airport locations. \nPress 3 to search for a custom route (specific flight). \nPress 4 to search for flights by the price. \nPress 5 to edit flight information.");
   int input = scan.nextInt();
   if(input == 1){
+
     System.out.println("1");//method or code for printing all flight information goes here
+    Graphing Graphing = new Graphing();
+    System.out.println("Enter: \n(1) for flight distances \n(2) for flight prices");
+    int choice = scan.nextInt();
+    if(choice == 1){
+      Graphing.distance();
+    }
+    if(choice == 2){
+    Graphing.price();
+  }else{
+      continue;
+    }
   }
   else if(input == 2){
-System.out.println("2");//method for calculating an mst of our tree using BFS (Prompt says it should be done by distance)
+    Graphing Graphing = new Graphing();
+    System.out.println("Enter: \n(1) for flight distances MST \n(2) for flight prices MST");
+    int choice = scan.nextInt();
+    if(choice == 1){
+      Graphing.PrimDistance();
+      System.out.println("");
+
+    }
+    if(choice == 2){
+    Graphing.PrimPrice();
+    System.out.println("");
+  }else{
+      continue;
+    }
   }
   else if(input == 3){
     Boolean next = true;

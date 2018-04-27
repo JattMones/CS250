@@ -23,3 +23,8 @@ Our team would like to acknowledge that the program does not currently support
 adding a route to the EWG currently. Although it does support adding
 destinations. This is feature is not available in the command interface because
 it does not explicitly satisfy the requirements for this lab.
+
+## Part 2
+1. If we suppose we use a stack instead of a queue, we would have to use a DFS 
+method. Otherwise we could simulate a queue with two stacks to use BFS. 
+2. There is only one mst possible, because it's a generic DAG.

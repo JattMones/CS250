@@ -1,0 +1,25 @@
+# Lab07
+This is the lab 7 submission for the EWG lab.
+
+## Running The Program
+To run the program, just compile the src folder and use the command
+
+`java input`
+
+This will bring the user to a command line interface where they can choose from
+one of five options.
+The user can interact with the menu however they please.
+
+## Algorithms
+The program utilizes the Prims algorithm discussed in class and is drawn from
+our Princeton textbook. Using this algorithm, the program calculates an MST for
+each EWG, price and distance
+
+## Sources
+This project largely draws from the Princeton textbook for implementation.
+
+## Shortcomings
+Our team would like to acknowledge that the program does not currently support
+adding a route to the EWG currently. Although it does support adding
+destinations. This is feature is not available in the command interface because
+it does not explicitly satisfy the requirements for this lab.

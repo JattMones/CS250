@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileNotFoundException;
 
 public class input{
 
@@ -42,23 +46,66 @@ System.out.println("Press 1 to show all flight information. \nPress 2 to show a 
     }
   }
   else if(input == 3){
+    try {
+      cities cities = new cities();
     Boolean next = true;
-    Boolean to = true;
+    String city;
+    String[] tempsArray;
     while(next){
+      Scanner distanceReader = new Scanner(new File("routeEWG.txt")).useDelimiter("\\s*\t*\\s");
+      Scanner PriceReader = new Scanner(new File("priceEWG.txt")).useDelimiter("\\s*\t*\\s");
+
+      distanceReader.next();
+      PriceReader.next();
+      distanceReader.next();
+      PriceReader.next();
+      distanceReader.next();
+      PriceReader.next();
+      distanceReader.next();
+      PriceReader.next();
+    int count = 0;
+    int count2 = 29;
     System.out.println("Enter the city you'd like to see flight information about");
-    String city = scan.next();
-    System.out.println("To or from Pittsburgh?");
+    city = scan.next();
+    System.out.println("PIT or PHL");
     String check = scan.next();
-    if(check.equals("from")){
-    to = false;
+    if(check.equals("PIT")){
+        count2 = 0;
     }
+    while(count < 30){
+      try{
+    tempsArray = cities.toArray2();
+  }
+  catch(IOException e){
+    continue;
+  }
+          if(city.equals(tempsArray[count])){
+            System.out.println(city+": "+count);
+            count2 =count2 + count;
+      }
+      count++;
+    }
+    for(int l=0;l<count2-1;l++){
+      distanceReader.next();
+      PriceReader.next();
+      distanceReader.next();
+      PriceReader.next();
+      distanceReader.next();
+      PriceReader.next();
+    }
+    System.out.print("Distance(km): "+distanceReader.next()+" Price: $"+PriceReader.next());
+
     //method will take (city, to) as input, and print the specific flight information for it.
-    System.out.println("3");//method will take more user input to figure out what cities they're traveling between, and how they want to sort their seach (3 different ways in prompt)
-    System.out.println("Would you like to search for another custom flight?(y/n)");
+  //method will take more user input to figure out what cities they're traveling between, and how they want to sort their seach (3 different ways in prompt)
+    System.out.println("\nWould you like to search for another custom flight?(y/n)");
     if(scan.next().equals("n")){
       next = false;
     }
-    }
+  }
+  }catch (FileNotFoundException e){
+
+   continue;
+  }
     }
   else if(input == 4){//method will ask for a "price cap" from the user, display all flights under that price cap
     System.out.println("Please select the maximum price for your ticket (tickets range from $250-$1500");

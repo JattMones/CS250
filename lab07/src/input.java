@@ -108,10 +108,32 @@ System.out.println("Press 1 to show all flight information. \nPress 2 to show a 
   }
     }
   else if(input == 4){//method will ask for a "price cap" from the user, display all flights under that price cap
-    System.out.println("Please select the maximum price for your ticket (tickets range from $250-$1500");
-    int max = scan.nextInt();
-    //put "max" into some method and show all prices </= max.
-    System.out.println("4");
+ System.out.println("Please select the maximum price for your ticket (tickets range from $200-$450");
+  int max = scan.nextInt();
+  if(max < 200){
+    System.out.println("None");
+  }
+  else if (max == 200){
+    System.out.println("Flights under $" + max + ":" + "\nMorgantown Municipal Walter L. Bill Hart Field \nJohn Murtha Johnstown Cambria County \nNew York JFK");
+  }
+  else if(max <= 250 && max > 200){
+  System.out.println("Flights under $" + max + ":" + "\nArnold Palmer Regional Airport \nAltoona Blair County \nCarslise \nWashington \nNew York LaGuardia \nMorgantown Municipal Walter L. Bill Hart Field \nJohn Murtha Johnstown Cambria County \nNew York JFK");
+  }
+  else if(max <= 300 && max > 250){
+  System.out.println("Flights under $" + max + ":" + "\nAllegheny County \nNorth Central west Virginia Airport \nLatrobe \nDubois \nAkron \nMiami \nVegas \nDetroit \nErie \nArnold Palmer Regional Airport \nAltoona Blair County \nCarslise \nWashington \nNew York LaGuardia \nMorgantown Municipal Walter L. Bill Hart Field \nJohn Murtha Johnstown Cambria County \nNew York JFK");
+  }
+  else if(max <= 350 && max > 300){
+  System.out.println("Flights under $" + max + ":" + "\nOrlando \nDallas \nAllegheny County \nNorth Central west Virginia Airport \nLatrobe \nDubois \nAkron \nMiami \nVegas \nDetroit \nErie \nArnold Palmer Regional Airport \nAltoona Blair County \nCarslise \nWashington \nNew York LaGuardia \nMorgantown Municipal Walter L. Bill Hart Field \nJohn Murtha Johnstown Cambria County \nNew York JFK");
+  }
+  else if(max <= 400 && max > 350){
+  System.out.println("Flights under $" + max + ":" + "\nDenver \nLos Angeles \nSan Fran \nMinneapolis \nSeattle \nChicago \nAtlanta \nOrlando \nDallas \nAllegheny County \nNorth Central west Virginia Airport \nLatrobe \nDubois \nAkron \nMiami \nVegas \nDetroit \nErie \nArnold Palmer Regional Airport \nAltoona Blair County \nCarslise \nWashington \nNew York LaGuardia \nMorgantown Municipal Walter L. Bill Hart Field \nJohn Murtha Johnstown Cambria County \nNew York JFK");
+  }
+  else if(max < 450 && max > 400){
+  System.out.println("Flights under $" + max + ":" + "\nDenver \nLos Angeles \nSan Fran \nMinneapolis \nSeattle \nChicago \nAtlanta \nOrlando \nDallas \nAllegheny County \nNorth Central west Virginia Airport \nLatrobe \nDubois \nAkron \nMiami \nVegas \nDetroit \nErie \nArnold Palmer Regional Airport \nAltoona Blair County \nCarslise \nWashington \nNew York LaGuardia \nMorgantown Municipal Walter L. Bill Hart Field \nJohn Murtha Johnstown Cambria County \nNew York JFK");
+  }
+  else{
+    System.out.println("All Cities");
+  }
   }
   else{
     System.out.println("Would you like too add or remove a flight?");
